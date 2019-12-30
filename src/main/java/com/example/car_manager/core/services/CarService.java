@@ -22,4 +22,9 @@ public class CarService {
         carRepository.save(c);
         return "Car created!";
     }
+
+    public Car getCarByCode(String code) {
+        Optional<Car> car = carRepository.findByCode(code);
+        return car.orElse(null);
+    }
 }

@@ -20,6 +20,11 @@ public class CarController {
         return ResponseEntity.ok(carService.getCarById(id));
     }
 
+    @GetMapping(path = "/{code}")
+    public ResponseEntity getCarByCode(@PathVariable String code) {
+        return ResponseEntity.ok(carService.getCarByCode(code));
+    }
+
     @PostMapping(path = "/create")
     public ResponseEntity createCar(@RequestBody Car car) {
         return ResponseEntity.ok(carService.createCar(car));
