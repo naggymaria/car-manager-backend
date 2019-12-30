@@ -20,7 +20,7 @@ public class CarController {
         return ResponseEntity.ok(carService.getCarById(id));
     }
 
-    @GetMapping(path = "/{code}")
+    @GetMapping(path = "/code/{code}")
     public ResponseEntity getCarByCode(@PathVariable String code) {
         return ResponseEntity.ok(carService.getCarByCode(code));
     }
